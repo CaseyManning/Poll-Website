@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var answer = require('./routes/answer');
 var create = require('./routes/create');
+var newuser = require('./routes/newuser');
 
 var mongo = require('mongodb');
 var monk = require('monk');
@@ -45,6 +46,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes); 
 app.use('/answer', answer);
 app.use('/create', create); 
+app.use('/newuser', newuser); 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
