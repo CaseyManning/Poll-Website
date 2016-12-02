@@ -14,13 +14,6 @@ var mongo = require('mongodb');
 var monk = require('monk');
 //var db = monk('localhost:27017/test');
 
-//var dbaddress = 'localhost:27017/test'
-// var dbaddress = process.env.MONGO_URL;
-// if (! dbaddress) {
-//   throw new Error("No MONGO_URL environment variable set!")
-// }
-
-
 var dbaddress = process.env.MONGO_URL;
 if (! dbaddress) {
   dbaddress = 'localhost:27017/test'
