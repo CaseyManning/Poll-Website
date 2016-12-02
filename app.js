@@ -19,13 +19,15 @@ var monk = require('monk');
 // if (! dbaddress) {
 //   throw new Error("No MONGO_URL environment variable set!")
 // }
-console.log('Using DB Address: ' + dbaddress);
-var db = monk(dbaddress);
+
 
 var dbaddress = process.env.MONGO_URL;
 if (! dbaddress) {
   dbaddress = 'localhost:27017/test'
 }
+
+console.log('Using DB Address: ' + dbaddress);
+var db = monk(dbaddress);
 
 var app = express();
 
