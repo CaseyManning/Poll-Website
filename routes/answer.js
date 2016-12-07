@@ -26,7 +26,7 @@ router.get('/', function(req, res, next) {
                  answer3: polllist[i].answer3,
                  answer4: polllist[i].answer4
             });
-
+             t
             req.answered.push();
             req.answered[req.answered.length - 1] = i;
         }
@@ -34,7 +34,7 @@ router.get('/', function(req, res, next) {
             res.render('answer', {
                 title: 'Answer Polls',
                 bodytext: '',
-                uestion: "There are no more polls to answer!",
+                question: "There are no more polls to answer!",
                 answer1: "Oh no!",
                 answer2: "How disappointing...",
                 answer3: "This website must be horrible",
@@ -49,8 +49,6 @@ router.post('/', function(req, res, next) {
   var db = req.db;
   var pollcollection = db.get('polls');
   //console.log(req);
-  console.log(req.body);
-
   //pollcollection.update({'question':''}, {$set:{'question':'New MongoDB Tutorial'}},{multi:true})
 
 
@@ -63,4 +61,3 @@ router.post('/', function(req, res, next) {
 });
 
 module.exports = router;
-

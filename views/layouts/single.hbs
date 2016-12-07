@@ -1,26 +1,33 @@
 <html>
-    <head>
+	<head>
 	<title>{{title}}</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta http-equiv="Content-Language" content="en">
 
-	<link rel="stylesheet" href="/css/bootstrap.css"></link>
+	<!-- <link rel="stylesheet" href="/css/bootstrap.css"></link> -->
 	<link rel="stylesheet" href="/css/style.css"></link>
 	<script type="text/javascript" src="/js/jquery.min.js"></script>
 	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
-    </head>
-    <body>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+	<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+	<!-- <link rel="stylesheet" href="css/materialize.css"> -->
+<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+	</head>
+	<body style="text-align: center">
     
-	{{>header}}
-	<div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    {{{ body }}}
-                </div>
-            </div>
-    	</div>
-    	{{>footer}}
-    </body>
+		{{>header}}
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 center">
+					{{{ body }}}
+				</div>
+			</div>
+		</div>
+		{{>footer}}
+	</body>
 </html>
