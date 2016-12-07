@@ -24,8 +24,11 @@ var db = monk(dbaddress);
 
 var app = express();
 
+var answered = [];
+
 app.use(function(req,res,next){
     req.db = db;
+    req.answered = answered;
     next();
 });
 // view engine setup
