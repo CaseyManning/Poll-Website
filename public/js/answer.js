@@ -1,10 +1,13 @@
+console.log("EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
+
+
 $(document).ready(function () {
 
 	console.log("We have document ready!");
 	$(".mdl-button mdl-js-button mdl-button--raised").on('click', function () {
 		console.log("We have answered a poll!");
 		location.reload();
-	})
+	});
 
 	$("#button1").on('click', function () {
 		console.log("We have answered a poll!");
@@ -14,7 +17,7 @@ $(document).ready(function () {
 			data: {
 				button: 1
 			},
-			dataType: 'html', 
+			dataType: 'html'
 		});
 
 	request.done(function (response) {
@@ -28,6 +31,6 @@ $(document).ready(function () {
 			console.error(textStatus);
 		});
 
-	})
+	});
 	
-})
+});

@@ -18,7 +18,7 @@ $("#submit-button").on('click', function () {
 				answer3: $("#answer3").val(),
 				answer4: $("#answer4").val(),
 			},
-			dataType: 'html', 
+			dataType: 'html' 
 		});
 	
 	console.log("Button is pressed! (DDDDDDDDDDDDDDDDDDD)");
@@ -34,6 +34,6 @@ $("#submit-button").on('click', function () {
 			console.error(textStatus);
 		});
 
-})
+});
 
-})
+});
